@@ -1,0 +1,7 @@
+{
+  "name": "pibpa",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
