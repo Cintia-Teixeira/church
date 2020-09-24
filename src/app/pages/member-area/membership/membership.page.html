@@ -1,0 +1,88 @@
+<ion-content>
+    <ion-row>
+      <ion-button (click)="toggleBulkEdit()" expand="block" class="edit" color="#fff">
+        Editar
+      </ion-button>
+    
+      <ion-button (click)="bulkDelete()" expand="block" class="del" color="#fff" *ngIf="bulkEdit">
+        Remover
+      </ion-button>
+
+      <ion-button expand="block" class="itens" color="#fff"> Itens por página:
+        <ion-select interface="popover" [(ngModel)]="resultsCount" (ionChange)="loadData()">
+          <ion-select-option [value]="10">10</ion-select-option>
+          <ion-select-option [value]="25">25</ion-select-option>
+          <ion-select-option [value]="50">50</ion-select-option>
+        </ion-select>
+      </ion-button>
+  </ion-row>
+  
+  <ion-row class="header-row">
+    <ion-col size="3" *ngIf="bulkEdit">
+      Selecionar
+    </ion-col> 
+    <ion-col size="5" size-md=2>
+      Nome
+    </ion-col>
+    <ion-col size="3" class="ion-hide-md-down">
+      Email
+    </ion-col>
+    <ion-col  size="4" size-md="2">
+      Telefone
+    </ion-col>
+    <ion-col size="3" class="ion-hide-md-down">
+      Endereço
+    </ion-col>
+  
+  </ion-row>
+  
+  <ion-row *ngFor="let row of data; let i = index;" class="data-row"> 
+    <ion-col size="3" *ngIf="bulkEdit" class="ion-text-center">
+     <ion-checkbox [(ngModel)]="edit[i]"></ion-checkbox>
+    </ion-col> 
+    <ion-col size="5" size-md=2>
+      {{row.name?.first}} {{row.name?.last}}
+    </ion-col>
+    <ion-col size="3" class="ion-hide-md-down">
+      {{row.email}}
+    </ion-col>
+    <ion-col size="4" size-md="2">
+      {{row.phone}}
+    </ion-col>
+    <ion-col size="3" class="ion-hide-md-down">
+      {{row.location?.street?.name}}, {{row.location?.street?.number}}, {{row.location?.city}}  
+    </ion-col>
+  </ion-row> 
+  
+  <ion-row>
+    <ion-col size="12" class="ion-text-center">
+      {{page + 1}} de {{ totalPages }}
+    </ion-col>
+  </ion-row>
+  
+  <ion-row>
+    <div class="navigation">
+    <ion-col size="2">
+      <ion-button fill="clear" (click)="goFirst()">
+        <ion-icon name="play-back" slot="icon-only" size="small"></ion-icon>
+      </ion-button>
+    </ion-col>
+    <ion-col size="2">
+      <ion-button fill="clear" (click)="prevPage()">
+        <ion-icon name="chevron-back" slot="icon-only" size="small"></ion-icon>
+      </ion-button>
+    </ion-col>
+  
+    <ion-col size="2">
+      <ion-button fill="clear" (click)="nextPage()">
+        <ion-icon name="chevron-forward" slot="icon-only" size="small"></ion-icon>
+      </ion-button>
+    </ion-col>
+    <ion-col size="2">
+      <ion-button fill="clear" (click)="goLast()">
+        <ion-icon name="play-forward" slot="icon-only" size="small"></ion-icon>
+      </ion-button>
+    </ion-col>
+  </div>
+  </ion-row>
+  </ion-content>
