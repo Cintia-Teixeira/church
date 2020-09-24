@@ -1,0 +1,40 @@
+ion-segment {
+  width: fit-content;
+  margin: 16px;
+  background-color: #b4b4b1;
+}
+
+ion-content {
+  --background: #574536 url("../../../assets/wallpaper (2).png") no-repeat
+    center center / cover !important;
+}
+
+ion-card {
+  opacity: 0.6;
+}
+
+ion-row.title {
+  height: 55px;
+}
+
+ion-col {
+  position: relative;
+  vertical-align: middle;
+}
+
+.schedule h4, .schedule h5 {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  left: 25%;
+}
+
+h3 {
+  color: white;
+}
+
+h4,
+h5 {
+  color: #343432;
+}
