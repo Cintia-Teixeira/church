@@ -1,0 +1,40 @@
+h3.subtitle {
+  margin-bottom: 25px;
+}
+
+ion-button {
+  width: 70px;
+  height: 35px;
+  opacity: 0.9;
+}
+
+.validation-errors {
+  margin-bottom: 20px;
+}
+
+.error-message {
+  color: var(--ion-color-vdr);
+  font-size: 14px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+ion-item.form {
+  border: 1px solid var(--ion-color-vdr);
+}
+
+ion-label {
+  margin-left: 5px;
+  margin-top: 11px;
+}
+
+ion-icon {
+  color: var(--ion-color-vdr);
+}
+
+@media (min-width: 1200px) {
+  ion-col.redes {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+}
