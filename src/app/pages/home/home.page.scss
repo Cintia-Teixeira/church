@@ -1,0 +1,47 @@
+h1 {
+  font-weight: bold;
+  color: #fff;
+}
+
+ion-content {
+  --background: #574536 url("../../../assets/wallpaper (2).png") no-repeat center
+    center / cover !important;
+}
+
+ion-card {
+  margin: -3px;
+  margin-top: 5px;
+  width: 100%;
+  height: 80px;
+  background-color: #574536;
+  opacity: 0.6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+ion-card a {
+  font-weight: bold;
+  font-size: 18px;
+  color: #fff;
+}
+
+span {
+  display: flex;
+  justify-content: center;
+}
+
+span img {
+  margin-bottom: 20px;
+  filter: contrast(1.8) brightness(1.5) grayscale(1);
+}
+
+.menu {
+  justify-content: left;
+}
+
+.logo {
+  margin: 10px;
+  width: 90%;
+}
+
