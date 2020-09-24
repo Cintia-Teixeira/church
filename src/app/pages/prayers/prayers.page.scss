@@ -1,0 +1,19 @@
+ion-content {
+  --background: #574536 url("../../../assets/wallpaper (2).png") no-repeat
+    center center / cover !important;
+}
+
+ion-card {
+  margin: 24px 0px 5px 0px;
+  width: 100%;
+  opacity: 0.6;
+}
+
+h3, h4 {
+  color: #fff;
+}
+
+ion-card-content {
+  color: #343432;
+  font-weight: bold;
+}
