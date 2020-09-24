@@ -13,37 +13,46 @@ export class AppComponent implements OnInit {
   public selectedIndex = 0;
   public appPages = [
     {
-      title: 'Inbox',
-      url: '/folder/Inbox',
-      icon: 'mail'
+      title: 'Home',
+      url: '/home'
     },
     {
-      title: 'Outbox',
-      url: '/folder/Outbox',
-      icon: 'paper-plane'
+      title: 'Quem somos',
+      url: '/quem-somos'
     },
     {
-      title: 'Favorites',
-      url: '/folder/Favorites',
-      icon: 'heart'
+      title: 'Em que cremos',
+      url: '/em-que-cremos'
     },
     {
-      title: 'Archived',
-      url: '/folder/Archived',
-      icon: 'archive'
+      title: 'Atividades',
+      url: '/atividades'
     },
     {
-      title: 'Trash',
-      url: '/folder/Trash',
-      icon: 'trash'
+      title: 'Pregações',
+      url: '/pregacoes'
     },
     {
-      title: 'Spam',
-      url: '/folder/Spam',
-      icon: 'warning'
+      title: 'Galeria',
+      url: '/galeria'
+    },
+    {
+      title: 'Eventos',
+      url: '/eventos'
+    },
+    {
+      title: 'Motivos de oração',
+      url: '/oracoes'
+    },
+    {
+      title: 'Contato',
+      url: '/contato'
+    },
+    {
+      title: 'Login',
+      url: '/login'
     }
   ];
-  public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
 
   constructor(
     private platform: Platform,
@@ -61,9 +70,11 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    const path = window.location.pathname.split('folder/')[1];
+    const path = window.location.pathname.split('/')[1];
     if (path !== undefined) {
-      this.selectedIndex = this.appPages.findIndex(page => page.title.toLowerCase() === path.toLowerCase());
+      this.selectedIndex = this.appPages.findIndex(page => page.title.normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '').replace(/[^\w\-]+/g, '-')
+      .toLowerCase() === path.toLowerCase());
     }
   }
 }
