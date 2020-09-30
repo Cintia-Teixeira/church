@@ -1,4 +1,6 @@
 <ion-content>
+  <div class="bg-image"></div>
+  <div class="content">
   <span class="menu">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
@@ -6,7 +8,34 @@
     <h3>Motivos de oração</h3>
   </span>
 
-  <ion-grid class="ion-padding">
+  <ion-list *ngFor="let prayer of prayersInfo; let i = index;" lines="none" detail="false" no-padding>
+    <ion-item color="none" tappable (click)="toggleSection(i)" [ngClass]="{'section-active': prayer.open, 'section': !prayer.open}">
+      <ion-icon slot="start" name="chevron-forward-outline" size="small" *ngIf="!prayer.open"></ion-icon>
+      <ion-icon slot="start" name="chevron-down-outline" size="small" *ngIf="prayer.open"></ion-icon>
+      <h4>{{prayer.name}}</h4>  
+    </ion-item>
+
+    <div *ngIf="prayer.details && prayer.open">
+      <ion-grid>
+        <ion-row>
+          <ion-col size="12" size-md="4" *ngFor="let detail of prayer.details; let j = index;">
+            <ion-card>
+              <ion-card-content>
+                {{detail.information}}
+              </ion-card-content>
+            </ion-card>
+        </ion-col>
+        </ion-row>
+      </ion-grid>
+   
+    </div>
+  </ion-list>
+
+
+
+
+
+  <!-- <ion-grid class="ion-padding">
     <h4>Ore pela Igreja</h4>
     <ion-row>
       <ion-col size="12" size-md="4">
@@ -71,8 +100,7 @@
           </ion-card-content>
         </ion-card>
     </ion-col>
-    </ion-row>
-
-       
-  </ion-grid>
+    </ion-row> 
+  </ion-grid> -->
+  </div>
 </ion-content>
