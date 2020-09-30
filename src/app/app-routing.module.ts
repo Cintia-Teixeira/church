@@ -1,4 +1,3 @@
-import { EventDetailPage } from './pages/event-detail/event-detail.page';
 import { MemberAreaPage } from './pages/member-area/member-area.page';
 import { EventsPage } from './pages/events/events.page';
 import { GalleryPage } from './pages/gallery/gallery.page';
@@ -62,11 +61,7 @@ const routes: Routes = [
   {
     path: 'area-do-membro',
     component: MemberAreaPage
-  },
-  {
-    path: 'evento-detalhe',
-    component: EventDetailPage
-  },
+  }
 ];
 
 @NgModule({

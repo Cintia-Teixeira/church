@@ -1,61 +1,64 @@
 <ion-content>
-  <span class="menu">
-    <ion-buttons slot="start">
-      <ion-menu-button color="white"></ion-menu-button>
-    </ion-buttons>
-    <h3>Eventos</h3>
-  </span>
+  <div class="bg-image"></div>
+  <div class="content">
+    <span class="menu">
+      <ion-buttons slot="start">
+        <ion-menu-button color="white"></ion-menu-button>
+      </ion-buttons>
+      <h3>Eventos</h3>
+    </span>
 
-  <ion-segment (ionChange)="segmentChanged($event)" value="next">
-    <ion-segment-button value="next">
-      <ion-label>Próximos</ion-label>
-    </ion-segment-button>
-    <ion-segment-button value="last">
-      <ion-label>Anteriores</ion-label>
-    </ion-segment-button>
-  </ion-segment>
+    <ion-segment (ionChange)="segmentChanged($event)" value="next">
+      <ion-segment-button value="next">
+        <ion-label>Próximos</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="last">
+        <ion-label>Anteriores</ion-label>
+      </ion-segment-button>
+    </ion-segment>
 
-  <ion-card *ngIf="selectedSegment == 'next'">
-    <ion-row class="title">
-      <ion-col class="schedule" size=2.5>
-        <h4>05 MAI</h4>       
-      </ion-col>
-      <ion-col>
-        <h4>IV Jornada Teológica</h4>
-      </ion-col>
-    </ion-row>
+    <ion-card *ngIf="selectedSegment == 'next'">
+      <ion-row class="title">
+        <ion-col class="schedule" size=2.5>
+          <h4>05 MAI</h4>
+        </ion-col>
+        <ion-col>
+          <h4>IV Jornada Teológica</h4>
+        </ion-col>
+      </ion-row>
       <ion-row>
         <ion-col class="schedule" size="2.5">
           <h5>9:00</h5>
         </ion-col>
-        <ion-col>        
+        <ion-col>
           <h5>
-          Founded in 1829 on an isthmus between Lake Monona and Lake Mendota,
-          Madison was named the capital of the Wisconsin Territory in 1836.
-        </h5>
-      </ion-col>
-    </ion-row>
-  </ion-card>
-  
-  <ion-card *ngIf="selectedSegment == 'last'">
-    <ion-row class="title">
-      <ion-col class="ion-text-center" size=3>
-        <h4>05 MAI</h4>       
-      </ion-col>
-      <ion-col>
-        <h4>III Jornada Teológica</h4>
-      </ion-col>
-    </ion-row>
+            Founded in 1829 on an isthmus between Lake Monona and Lake Mendota,
+            Madison was named the capital of the Wisconsin Territory in 1836.
+          </h5>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+
+    <ion-card *ngIf="selectedSegment == 'last'">
+      <ion-row class="title">
+        <ion-col class="schedule" size=2.5>
+          <h4>05 MAI</h4>
+        </ion-col>
+        <ion-col>
+          <h4>III Jornada Teológica</h4>
+        </ion-col>
+      </ion-row>
       <ion-row>
-        <ion-col id="time" size="3">
+        <ion-col class="schedule" size="2.5">
           <h5>9:00</h5>
         </ion-col>
-        <ion-col>        
+        <ion-col>
           <h5>
-          Founded in 1829 on an isthmus between Lake Monona and Lake Mendota,
-          Madison was named the capital of the Wisconsin Territory in 1836.
-        </h5>
-      </ion-col>
-    </ion-row>
-  </ion-card>
+            Founded in 1829 on an isthmus between Lake Monona and Lake Mendota,
+            Madison was named the capital of the Wisconsin Territory in 1836.
+          </h5>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+  </div>
 </ion-content>
