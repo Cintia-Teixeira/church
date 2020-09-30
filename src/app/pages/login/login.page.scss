@@ -1,7 +1,7 @@
 ion-button {
-    width: 70px;
-    height: 35px;
-    opacity: 0.9;
+    // width: 70px;
+    // height: 35px;
+    opacity: 0.7;
 }
 
 .validation-errors {
@@ -16,8 +16,13 @@ ion-button {
   margin-top: 10px;
 }
 
+// ion-item.form {
+//     border: 1px solid var(--ion-color-vdr);
+// }
+
 ion-item.form {
-    border: 1px solid var(--ion-color-vdr);
+    border-bottom: 1px solid white;
+    color: white;
 }
 
 ion-label {
@@ -25,10 +30,41 @@ ion-label {
     margin-top: 11px;
 }
 
-ion-icon {
-    color: var(--ion-color-vdr);
+ion-icon, h3 {
+    color: white;
 }
 
-ion-list {
-    background: snow;
-}
+// ion-card {
+//     opacity: 0.6;
+//     padding: 5px;
+// }
+
+.bg-image {
+    background-image: url("../../../assets/wallpaper (2).png");
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0px;
+  }
+  
+  .content {
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/opacity/see-through */
+    color: white;
+    font-weight: bold;
+    border: 3px solid #f1f1f1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 100%;
+    padding: 20px;
+    margin: 0px;
+    text-align: center;
+    overflow: auto;
+  }
