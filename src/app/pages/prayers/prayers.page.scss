@@ -1,7 +1,10 @@
-// ion-content {
-//   --background: #574536 url("../../../assets/wallpaper (2).png") no-repeat
-//     center center / cover !important;
-// }
+ion-list {
+  background: none;
+}
+
+h4 {
+  color: white;
+}
 
 ion-card {
   margin: 24px 0px 5px 0px;
@@ -9,47 +12,7 @@ ion-card {
   opacity: 0.6;
 }
 
-ion-list {
-  background: none;
-}
-
-h3,
-h4,
-ion-icon {
-  color: #fff;
-}
-
 ion-card-content {
   color: #343432;
   font-weight: bold;
-}
-
-.bg-image {
-  background-image: url("../../../assets/wallpaper (2).png");
-  filter: blur(2px);
-  -webkit-filter: blur(2px);
-  height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin: 0px;
-}
-
-.content {
-  background-color: rgb(0, 0, 0); /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4); /* Black w/opacity/see-through */
-  color: white;
-  font-weight: bold;
-  border: 3px solid #f1f1f1;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  height: 100%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  width: 100%;
-  padding: 20px;
-  margin: 0px;
-  text-align: center;
-  overflow: auto;
 }
