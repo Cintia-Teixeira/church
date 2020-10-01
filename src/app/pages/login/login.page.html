@@ -1,6 +1,6 @@
-<ion-content>
+<ion-content class="background-image">
   <div class="bg-image"></div>
-  <div class="content">
+  <div class="container">
   <span class="menu">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
@@ -11,7 +11,6 @@
   <ion-grid>
     <ion-row>
       <ion-col size-md="5" size-xs="12">
-        <!-- <ion-card> -->
         <form [formGroup]="validationsForm" (ngSubmit)="onSubmit(validationsForm.value)">
           <ion-item class="form" color="none" lines="none">
             <ion-label position="floating">Email *</ion-label>
@@ -33,7 +32,7 @@
           </ion-item>
           <div class="validation-errors">
             <ng-container *ngFor="let validation of validationMessages.password">
-              <div class="error-message"
+              <div class="error-message message-color"
                 *ngIf="validationsForm.get('password').hasError(validation.type) && (validationsForm.get('password').dirty || validationsForm.get('password').touched)">
                 <ion-icon name="information-circle-outline"></ion-icon> {{
                 validation.message }}
@@ -43,9 +42,6 @@
           <ion-button color="vdr" expand="block" slot="end" type="submit" [disabled]="!validationsForm.valid">Enviar
           </ion-button>
         </form>
-
-        <!-- <ion-button expand="block" routerLink="/area-do-membro/membresia">Login</ion-button> -->
-      <!-- </ion-card> -->
       </ion-col>
     </ion-row>
   </ion-grid>

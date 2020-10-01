@@ -11,65 +11,65 @@
       <ion-col size-md=5 size-xs=12>
         <h3 class="subtitle">Envie-nos umas mensagem</h3>
         <form [formGroup]="validationsForm" (ngSubmit)="onSubmit(validationsForm.value)">
-          <ion-item class="form">
+          <ion-item class="form" lines="none">
             <ion-label position="floating">Nome *</ion-label>
             <ion-input type="text" formControlName="name"></ion-input>
           </ion-item>
           <div class="validation-errors">
             <ng-container *ngFor="let validation of validationMessages.name">
-              <div class="error-message"
+              <div class="error-message message-color"
                 *ngIf="validationsForm.get('name').hasError(validation.type) && (validationsForm.get('name').dirty || validationsForm.get('name').touched)">
                 <ion-icon name="information-circle-outline"></ion-icon> {{ validation.message }}
               </div>
             </ng-container>
           </div>
 
-          <ion-item class="form">
+          <ion-item class="form" lines="none">
             <ion-label position="floating">Sobrenome *</ion-label>
             <ion-input type="text" formControlName="lastname"></ion-input>
           </ion-item>
           <div class="validation-errors">
             <ng-container *ngFor="let validation of validationMessages.lastname">
-              <div class="error-message"
+              <div class="error-message message-color"
                 *ngIf="validationsForm.get('lastname').hasError(validation.type) && (validationsForm.get('lastname').dirty || validationsForm.get('lastname').touched)">
                 <ion-icon name="information-circle-outline"></ion-icon> {{ validation.message }}
               </div>
             </ng-container>
           </div>
 
-          <ion-item class="form">
+          <ion-item class="form" lines="none">
             <ion-label position="floating">Email *</ion-label>
             <ion-input type="text" formControlName="email"></ion-input>
           </ion-item>
           <div class="validation-errors">
             <ng-container *ngFor="let validation of validationMessages.email">
-              <div class="error-message"
+              <div class="error-message message-color"
                 *ngIf="validationsForm.get('email').hasError(validation.type) && (validationsForm.get('email').dirty || validationsForm.get('email').touched)">
                 <ion-icon name="information-circle-outline"></ion-icon> {{ validation.message }}
               </div>
             </ng-container>
           </div>
 
-          <ion-item class="form">
+          <ion-item class="form" lines="none">
             <ion-label position="floating">Assunto *</ion-label>
             <ion-input type="text" formControlName="subject"></ion-input>
           </ion-item>
           <div class="validation-errors">
             <ng-container *ngFor="let validation of validationMessages.subject">
-              <div class="error-message"
+              <div class="error-message message-color"
                 *ngIf="validationsForm.get('subject').hasError(validation.type) && (validationsForm.get('subject').dirty || validationsForm.get('subject').touched)">
                 <ion-icon name="information-circle-outline"></ion-icon> {{ validation.message }}
               </div>
             </ng-container>
           </div>
 
-          <ion-item class="form">
+          <ion-item class="form" lines="none">
             <ion-label position="floating">Mensagem *</ion-label>
             <ion-textarea formControlName="message"></ion-textarea>
           </ion-item>
           <div class="validation-errors">
             <ng-container *ngFor="let validation of validationMessages.message">
-              <div class="error-message"
+              <div class="error-message message-color"
                 *ngIf="validationsForm.get('message').hasError(validation.type) && (validationsForm.get('message').dirty || validationsForm.get('message').touched)">
                 <ion-icon name="information-circle-outline"></ion-icon> {{ validation.message }}
               </div>
