@@ -1,11 +1,7 @@
 ion-item.form {
   border-bottom: 1px solid #fff;
   color: #fff;
-}
-
-ion-label {
-  margin-top: 11px;
-  margin-left: 5px;
+  --highlight-color-focused: #fff;
 }
 
 .message-color {
