@@ -1,3 +1,11 @@
+ion-grid {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+}
+
 ion-item.form {
   border-bottom: 1px solid #fff;
   color: #fff;
@@ -9,5 +17,24 @@ ion-item.form {
 }
 
 ion-button {
+  margin-top: 40px;
   opacity: 1;
+}
+
+@media (min-width: 540px) {
+  ion-grid {
+    width: 70%;
+  }
+}
+
+@media (min-width: 768px) {
+  ion-grid {
+    width: 55%;
+  }
+}
+
+@media (min-width: 1256px) {
+  ion-grid {
+    width: 40%;
+  }
 }
